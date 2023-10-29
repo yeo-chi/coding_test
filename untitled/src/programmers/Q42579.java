@@ -28,7 +28,6 @@ public class Q42579 {
             maps.get(genres[i]).put(i, plays[i]);
         }
 
-
         //장르별 재생횟수 총합
         Map<String, Integer> maps2 = new HashMap<>();
 
