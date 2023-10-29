@@ -4,8 +4,8 @@ package programmers;
  * https://school.programmers.co.kr/learn/courses/30/lessons/12909
  * <p>
  * 완벽한 괄호가 만들어져야 하기 때문에 첫번째가 )가 오거나 마지막이 (가 오면 안됨
- * 
- * 중간에라도 닫힌괄호가 더 많아져서는 안됨. 
+ * <p>
+ * 중간에라도 닫힌괄호가 더 많아져서는 안됨.
  */
 public class Q12909 {
     public boolean solution(String s) {
