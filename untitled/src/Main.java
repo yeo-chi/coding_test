@@ -1,11 +1,14 @@
 import programmers.Q42578;
+import programmers.Q42579;
+
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        Q42578 a = new Q42578();
+        Q42579 a = new Q42579();
 
-        int aa = a.solution(new String[][]{{"yellow_hat", "headgear"}, {"blue_sunglasses", "eyewear"}, {"green_turban", "headgear"}});
+        int[] aa = a.solution(new String[] {"classic", "pop", "classic", "classic", "pop"}, new int[] {500, 600, 150, 800, 2500});
 
-        System.out.println(aa);
+        System.out.println(Arrays.toString(aa));
     }
 }
