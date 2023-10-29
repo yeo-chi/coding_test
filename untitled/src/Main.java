@@ -1,13 +1,13 @@
-import programmers.Q12096;
+import programmers.Q12909;
 
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        Q12096 a = new Q12096();
+        Q12909 a = new Q12909();
 
-        int[] aa = a.solution(new int[]{1,1,3,3,0,1,1});
+        boolean aa = a.solution("()()()()");
 
-        System.out.println(Arrays.toString(aa));
+        System.out.println(aa);
     }
 }
