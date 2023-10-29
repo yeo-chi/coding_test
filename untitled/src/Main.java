@@ -1,10 +1,10 @@
-import programmers.Q42577;
+import programmers.Q42578;
 
 public class Main {
     public static void main(String[] args) {
-        Q42577 a = new Q42577();
+        Q42578 a = new Q42578();
 
-        boolean aa = a.solution(new String[]{"123", "1005", "1006", "1007"});
+        int aa = a.solution(new String[][]{{"yellow_hat", "headgear"}, {"blue_sunglasses", "eyewear"}, {"green_turban", "headgear"}});
 
         System.out.println(aa);
     }

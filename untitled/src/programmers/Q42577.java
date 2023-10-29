@@ -1,31 +1,21 @@
 package programmers;
 
+import java.util.Arrays;
+
 /**
  * https://school.programmers.co.kr/learn/courses/30/lessons/42577
  * <p>
- * for문을 돌리면서 해당 값의 길이만큼으로 봤을떄 일치하는 값이 있는지 확인한다.
+ * 숫자로된 문자열을 오름차순으로 정렬하고 바로 다음문자와 시작이 같은지 확인한다.
  */
 public class Q42577 {
     public boolean solution(String[] phone_book) {
-        for (String s : phone_book) {
-            int sLength = s.length();
-            int count = 0;
-
-            for (String s1 : phone_book) {
-                try {
-                    if (s.equals(s1.substring(0, sLength))) {
-                        count++;
-                    }
-                } catch (StringIndexOutOfBoundsException e) {
-
-                }
-            }
-
-            if (count == 2) {
+        Arrays.sort(phone_book);
+        for (int i = 0; i < phone_book.length - 1; i++) {
+            String s = phone_book[i];
+            if (phone_book[i + 1].startsWith(s)) {
                 return false;
             }
         }
-
         return true;
     }
 }
