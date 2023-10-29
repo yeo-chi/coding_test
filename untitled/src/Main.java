@@ -1,9 +1,11 @@
-import programmers.Q42583;
+import programmers.Q42584;
+
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        Q42583 a = new Q42583();
+        Q42584 a = new Q42584();
 
-        System.out.println(a.solution(2, 10, new int[]{7, 4, 5, 6}));
+        System.out.println(Arrays.toString(a.solution(new int[]{1, 2, 3, 2, 3})));
     }
 }
