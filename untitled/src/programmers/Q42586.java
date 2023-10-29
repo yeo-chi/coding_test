@@ -10,7 +10,7 @@ import java.util.Queue;
  * <p>
  * Queue 2개에 각 값을 넣고 반복으로 진행률을 더함
  * <p>
- * Queue의 맨앞의 값이 100이상일때 기 뒤에까지 값이 100이상인 데이터를 다 뽑으면서 count를 진행
+ * Queue의 맨앞의 값이 100이상일때 뒤에까지 값이 100이상인 데이터를 다 뽑으면서 count를 진행
  * <p>
  * 이렇게 계속 반복
  */
@@ -31,18 +31,29 @@ public class Q42586 {
         List<Integer> counts = new ArrayList<>();
 
         while (progressQueue.peek() != null && speedsQueue.peek() != null) {
-            progressQueue.add(progressQueue.peek() + speedsQueue.peek());
-            progressQueue.poll();
+
+            for (int i = 0; i < progressQueue.size(); i++) {
+                progressQueue.add(progressQueue.peek() + speedsQueue.peek());
+                speedsQueue.add(speedsQueue.peek());
+                progressQueue.poll();
+                speedsQueue.poll();
+            }
+
             int count = 0;
-            for(int i = 0; i < progressQueue.size(); i++) {
-                if(progressQueue.peek() >= 100) {
-                    progressQueue.poll();
-                    speedsQueue.poll();
-                    count++;
+
+            while(progressQueue.peek() >= 100) {
+                progressQueue.poll();
+                speedsQueue.poll();
+                count++;
+
+                if(progressQueue.peek() == null) {
+                    break;
                 }
             }
 
-            counts.add(count);
+            if(count != 0) {
+                counts.add(count);
+            }
         }
 
         return counts.stream().mapToInt(n -> n).toArray();
