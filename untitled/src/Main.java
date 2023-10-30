@@ -1,11 +1,9 @@
-import programmers.Q42584;
-
-import java.util.Arrays;
+import programmers.Q42862;
 
 public class Main {
     public static void main(String[] args) {
-        Q42584 a = new Q42584();
-
-        System.out.println(Arrays.toString(a.solution(new int[]{1, 2, 3, 2, 3})));
+        Q42862 a = new Q42862();
+        int answer = a.solution(5, new int[] {2, 4}, new int[] {3});
+        System.out.println(answer);
     }
 }
