@@ -1,9 +1,9 @@
-import programmers.Q42862;
+import programmers.Q12311;
 
 public class Main {
     public static void main(String[] args) {
-        Q42862 a = new Q42862();
-        int answer = a.solution(5, new int[] {2, 4}, new int[] {3});
+        Q12311 a = new Q12311();
+        String answer = a.solution("(A(BC)D)EF(G(H)(IJ)K)LM(N)");
         System.out.println(answer);
     }
 }
