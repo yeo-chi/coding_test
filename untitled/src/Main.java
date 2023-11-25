@@ -1,12 +1,8 @@
-import programmers.Q181187;
-import programmers.Q18188;
+import programmers.CCC;
 
 public class Main {
     public static void main(String[] args) {
-     Q181187 a = new Q181187();
-        long answer = a.solution(1, 4);
-        long answer2 = a.solution2(1, 4);
-        System.out.println(answer);
-        System.out.println(answer2);
+        CCC a = new CCC();
+        System.out.println(a.solution(new int[]{2, 5, 3, 8, 1}, 3, 11));;
     }
 }
