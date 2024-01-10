@@ -1,8 +1,10 @@
 import programmers.CCC;
+import programmers.Merge;
+
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        CCC a = new CCC();
-        System.out.println(a.solution(new int[]{2, 5, 3, 8, 1}, 3, 11));;
+        System.out.println(Arrays.toString(Merge.merge_sort(new int[]{2, 5, 3, 8, 1})));
     }
 }
